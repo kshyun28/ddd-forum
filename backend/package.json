@@ -17,7 +17,8 @@
     "prettier-watch:darwin:linux": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
     "prettier-watch:default": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
     "test": "jest",
-    "test:dev": "jest --watchAll"
+    "test:dev": "jest --watchAll",
+    "migrate:dev": "npx prisma migrate dev --name init"
   },
   "husky": {
     "hooks": {
@@ -28,6 +29,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
     "@types/jest": "^28.1.8",
     "@types/node": "^18.6.1",
     "@typescript-eslint/eslint-plugin": "^5.31.0",
@@ -48,6 +51,11 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "jest-cucumber": "^3.0.1"
+    "@prisma/client": "^6.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jest-cucumber": "^3.0.1",
+    "pg": "^8.13.1",
+    "prisma": "^6.1.0"
   }
 }
